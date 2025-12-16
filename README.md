@@ -9,14 +9,17 @@ This dataset contains **only**:
 
 **Not included**: IP addresses, ports, MACs, payloads, URLs, SNI/Host, certificates, JA3/JA4, QUIC CIDs, or any other protocol handshake identifiers.
 
+### Notes
+- Every 50 sessions are saved into a single CSV file.
+
 ---
 
 ## What’s inside
 
 - **Platforms**: YouTube / Bilibili / Twitch
 - **Transport (in our captures)**:
-  - **YouTube**: predominantly **QUIC (UDP/HTTP3)**
-  - **Bilibili**: predominantly **HTTPS over TCP**, with **TLS 1.2 and TLS 1.3**
+  - **YouTube**:  **QUIC (UDP/HTTP3)**
+  - **Bilibili**: **HTTPS over TCP**, with **TLS 1.2 and TLS 1.3**
   - **Twitch**: **TLS 1.3** (over TCP)
 - **Capture setting**: controlled **100 Mbps** access rate, focusing on the **first 30 seconds after video playback starts**.
 
@@ -34,8 +37,22 @@ The CSV contains **two columns**:
 
 - `rel_ts_us` is **relative time** (not wall-clock time).
 - `len` is the total packet length in bytes (consistent with how packets were exported from the capture pipeline).
-- If you need the original PCAP files, please contact **feelingevening@gmail.com**.
+- Due to repository size limits, we only upload a **subset** of the CSV files. If you need **all CSV files** or the **original PCAP files**, please contact **feelingevening@gmail.com**.
 
 
 ## Repository structure
-
+```text
+├── DataSet/
+│   ├── YouTube/
+│   │   ├── 1080/
+│   │   ├── 720/
+│   │   └── 480/
+│   ├── Twitch/
+│   │   ├── 1080/
+│   │   ├── 720/
+│   │   └── 480/
+│   └── BiliBili/
+│       ├── 1080/
+│       ├── 720/
+│       └── 480/
+└── README.md
