@@ -37,7 +37,7 @@ The CSV contains **two columns**:
 
 - `rel_ts_us` is **relative time** (not wall-clock time).
 - `len` is the total packet length in bytes (consistent with how packets were exported from the capture pipeline).
-- Due to repository size limits, we only upload a **subset** of the CSV files. If you need **all CSV files** or the **original PCAP files**, please contact **feelingevening@gmail.com**.
+
 
 
 ## Repository structure
@@ -56,3 +56,7 @@ The CSV contains **two columns**:
 │       ├── 720/
 │       └── 480/
 └── README.md
+```
+### Notes
+Due to repository size limits, we only upload a **subset** of the CSV files. If you need **all CSV files** or the **original PCAP files**, please contact **feelingevening@gmail.com**.
+
