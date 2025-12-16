@@ -19,7 +19,7 @@ This dataset contains **only**:
 - **Platforms**: YouTube / Bilibili / Twitch
 - **Transport (in our captures)**:
   - **YouTube**:  **QUIC (UDP/HTTP3)**
-  - **Bilibili**: **HTTPS over TCP**, with **TLS 1.2 and TLS 1.3**
+  - **Bilibili**: observed **both** (i) **HTTPS over TCP** with **TLS 1.2 / TLS 1.3**, and (ii) **QUIC over UDP (HTTP/3)** in some sessions
   - **Twitch**: **TLS 1.3** (over TCP)
 - **Capture setting**: controlled **100 Mbps** access rate, focusing on the **first 30 seconds after video playback starts**.
 
