@@ -19,8 +19,23 @@ This dataset contains **only**:
   - **Bilibili**: predominantly **HTTPS over TCP**, with **TLS 1.2 and TLS 1.3**
   - **Twitch**: **TLS 1.3** (over TCP)
 - **Capture setting**: controlled **100 Mbps** access rate, focusing on the **first 30 seconds after video playback starts**.
-  > If you need the original PCAP files, please contact **feelingevening@gmail.com**.
----
+
+
+### Header
+
+The CSV contains **two columns**:
+
+| column | type | description |
+|---|---:|---|
+| `rel_ts_us` | int | Relative packet arrival time in **microseconds (µs)** since the first packet of the session (`rel_ts_us >= 0`). |
+| `len` | int | **Total packet length** in bytes. |
+
+### Notes
+
+- `rel_ts_us` is **relative time** (not wall-clock time).
+- `len` is the total packet length in bytes (consistent with how packets were exported from the capture pipeline).
+- If you need the original PCAP files, please contact **feelingevening@gmail.com**.
+
 
 ## Repository structure
 
